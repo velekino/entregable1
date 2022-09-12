@@ -1,0 +1,19 @@
+<head>
+    <title>Familiares DB</title>
+</head>
+
+<body>
+    <h2>Famliares Guardados</h2>
+
+    {% if lista_familia %}
+    <ul>
+        {% for familiar in lista_familia %}
+        <li> <b> {{familiar.nombre}} </b> | {{familiar.edad}}| {{familiar.correo}} | {{familiar.fechanacimiento}}  </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No hay familiares en la db </p>
+    {% endif %}
+</body>
+
+</html>
